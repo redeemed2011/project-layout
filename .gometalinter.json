@@ -1,0 +1,31 @@
+{
+  "enable": [
+    "deadcode",
+    "errcheck",
+    "goconst",
+    "gocyclo",
+    "golint",
+    "gosec",
+    "gotype",
+    "gotypex",
+    "ineffassign",
+    "interfacer",
+    "maligned",
+    "megacheck",
+    "structcheck",
+    "unconvert",
+    "varcheck",
+    "vet",
+    "vetshadow",
+
+    "test",
+    "gofmt",
+    "gochecknoinits",
+    "gochecknoglobals",
+    "safesql",
+    "unparam"
+  ],
+  "tests": true,
+  "debug": false,
+  "concurrency": 8
+}
