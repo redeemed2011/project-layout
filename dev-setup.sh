@@ -22,20 +22,3 @@ go get -u -v github.com/go-task/task/cmd/task
 cd "${GOPATH}" && \
   curl -L https://git.io/vp6lP | sh
 cd - || exit 1
-
-
-which heroku
-retVal=$?
-
-# Install Heroku CLI if it is missing.
-if [ $retVal -ne 0 ]; then
-  # Install Ruby since it is a pre-req to heroku.
-  sudo apt-get install -y ruby-full
-  # Install Heroku CLI.
-  wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
-fi
-
-# Login to Herku.
-heroku login
-# Configure the local copy of the repo to allow us to push to heroku.
-heroku git:remote --app metro-bible
