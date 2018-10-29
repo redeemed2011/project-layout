@@ -1,9 +1,10 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-APP=exampleapp
-export APP
+set -e
+set -x
+
+
+. scripts/dev-envs.sh
 
 # Run the project every time a file changes.
-# task dev --watch
-watcher -depth 12 task dev
-# watcher gometalinter ./... && go run -race ./cmd/${APP}/main.go
+watcher -depth 6 scripts/./dev-start-helper.sh
